@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nisha Food — Bahadrabad, Haridwar</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Nisha Food - Fresh breakfast, lunch, dinner, Chinese, South Indian. Bahadrabad, Haridwar, Uttarakhand" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Nisha Food</h1>
+        <p class="tagline">Fresh Breakfast • Lunch • Dinner • Chinese • South Indian</p>
+      </div>
+      <nav class="nav">
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <ul id="navList" class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content container">
+        <h2>Welcome to Nisha Food</h2>
+        <p>Authentic flavors from Bahadrabad, Haridwar — fresh, tasty & affordable.</p>
+        <a class="btn" href="#menu">See Menu</a>
+      </div>
+    </section>
+
+    <section id="menu" class="container section">
+      <h3>Our Menu</h3>
+      <p class="muted">Breakfast • Lunch • Dinner • Chinese • South Indian</p>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <h4>Fresh Breakfast Combo</h4>
+          <p>Paratha / Poha / Aloo paratha with chutney and tea.</p>
+          <span class="price">₹80</span>
+        </article>
+        <article class="menu-item">
+          <h4>Veg Thali (Lunch/Dinner)</h4>
+          <p>Rotis, Sabzi, Dal, Rice, Salad & Sweet.</p>
+          <span class="price">₹120</span>
+        </article>
+        <article class="menu-item">
+          <h4>Chinese Noodles</h4>
+          <p>Vegetable / Chicken options, freshly prepared.</p>
+          <span class="price">₹110</span>
+        </article>
+        <article class="menu-item">
+          <h4>South Indian Platter</h4>
+          <p>Idli, Dosa, Sambar, Chutney — homestyle taste.</p>
+          <span class="price">₹130</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="container section about">
+      <h3>About Us</h3>
+      <p>Nisha Food - located in Bahadrabad, Haridwar (Uttarakhand) — 249402. Hum fresh aur hygienic khana provide karte hain, ghar jaise swad ke saath.</p>
+      <ul class="contact-info">
+        <li>Address: Bahadrabad, Haridwar, U.K. 249402</li>
+        <li>Phone: <a href="tel:+915634785634">5634785634</a></li>
+        <li>Email: <a href="mailto:nburman745@gmail.com">nburman745@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <section id="gallery" class="container section">
+      <h3>Gallery</h3>
+      <div class="gallery-grid" id="galleryGrid">
+        <img src="https://images.unsplash.com/photo-1543332164-6e6e8bb5c6f8?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="dish 1">
+        <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="dish 2">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="dish 3">
+      </div>
+    </section>
+
+    <section id="contact" class="container section contact">
+      <h3>Contact / Order</h3>
+      <p>Aap seedhe phone ya email se order kar sakte hain. Neeche form bhi bhar kar bhej sakte hain.</p>
+
+      <div class="contact-columns">
+        <form id="contactForm" class="contact-form" novalidate>
+          <label>
+            Naam
+            <input type="text" name="name" id="name" required placeholder="Aapka naam" />
+          </label>
+          <label>
+            Phone
+            <input type="tel" name="phone" id="phone" required placeholder="5634785634" />
+          </label>
+          <label>
+            Message / Order
+            <textarea name="message" id="message" rows="4" required placeholder="Aapka message ya order details"></textarea>
+          </label>
+          <button type="submit" class="btn">Send Message</button>
+          <p id="formStatus" class="form-status" aria-live="polite"></p>
+        </form>
+
+        <div class="contact-card">
+          <h4>Visit / Call</h4>
+          <p><strong>Nisha Food</strong></p>
+          <p>Bahadrabad, Haridwar, Uttarakhand - 249402</p>
+          <p>Phone: <a href="tel:+915634785634">5634785634</a></p>
+          <p>Email: <a href="mailto:nburman745@gmail.com">nburman745@gmail.com</a></p>
+          <p>Opening Hours: 7:00 AM — 10:00 PM</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Nisha Food — Bahadrabad, Haridwar. Designed by Nisha Food.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
