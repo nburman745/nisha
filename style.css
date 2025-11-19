@@ -1,127 +1,77 @@
-<!doctype html>
-<html lang="hi">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nisha Food — Bahadrabad, Haridwar</title>
-  <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Nisha Food - Fresh breakfast, lunch, dinner, Chinese, South Indian. Bahadrabad, Haridwar, Uttarakhand" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <h1>Nisha Food</h1>
-        <p class="tagline">Fresh Breakfast • Lunch • Dinner • Chinese • South Indian</p>
-      </div>
-      <nav class="nav">
-        <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
-        <ul id="navList" class="nav-list">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+/* Basic reset and variables */
+:root{
+  --bg:#fffaf6;
+  --accent:#e85a4f;
+  --muted:#666;
+  --container-width:1100px;
+  --radius:8px;
+  --card-bg: #ffffffcc;
+  --glass: rgba(255,255,255,0.6);
+  --nav-height:64px;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-content container">
-        <h2>Welcome to Nisha Food</h2>
-        <p>Authentic flavors from Bahadrabad, Haridwar — fresh, tasty & affordable.</p>
-        <a class="btn" href="#menu">See Menu</a>
-      </div>
-    </section>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:linear-gradient(180deg,#fffaf6 0%, #ffece6 100%);color:#222;line-height:1.5}
+.container{max-width:var(--container-width);margin:0 auto;padding:0 16px}
+.site-header{background:transparent;position:sticky;top:0;z-index:50;padding:12px 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand h1{font-size:1.4rem;color:var(--accent);margin-bottom:4px}
+.tagline{font-size:.9rem;color:var(--muted)}
 
-    <section id="menu" class="container section">
-      <h3>Our Menu</h3>
-      <p class="muted">Breakfast • Lunch • Dinner • Chinese • South Indian</p>
-      <div class="menu-grid">
-        <article class="menu-item">
-          <h4>Fresh Breakfast Combo</h4>
-          <p>Paratha / Poha / Aloo paratha with chutney and tea.</p>
-          <span class="price">₹80</span>
-        </article>
-        <article class="menu-item">
-          <h4>Veg Thali (Lunch/Dinner)</h4>
-          <p>Rotis, Sabzi, Dal, Rice, Salad & Sweet.</p>
-          <span class="price">₹120</span>
-        </article>
-        <article class="menu-item">
-          <h4>Chinese Noodles</h4>
-          <p>Vegetable / Chicken options, freshly prepared.</p>
-          <span class="price">₹110</span>
-        </article>
-        <article class="menu-item">
-          <h4>South Indian Platter</h4>
-          <p>Idli, Dosa, Sambar, Chutney — homestyle taste.</p>
-          <span class="price">₹130</span>
-        </article>
-      </div>
-    </section>
+.nav-list{list-style:none;display:flex;gap:12px;align-items:center}
+.nav-list a{text-decoration:none;color:#222;padding:8px 10px;border-radius:6px}
+.nav-list a:hover{background:#fff0ef}
 
-    <section id="about" class="container section about">
-      <h3>About Us</h3>
-      <p>Nisha Food - located in Bahadrabad, Haridwar (Uttarakhand) — 249402. Hum fresh aur hygienic khana provide karte hain, ghar jaise swad ke saath.</p>
-      <ul class="contact-info">
-        <li>Address: Bahadrabad, Haridwar, U.K. 249402</li>
-        <li>Phone: <a href="tel:+915634785634">5634785634</a></li>
-        <li>Email: <a href="mailto:nburman745@gmail.com">nburman745@gmail.com</a></li>
-      </ul>
-    </section>
+.menu-toggle{display:none;border:0;background:transparent;font-size:1.4rem}
 
-    <section id="gallery" class="container section">
-      <h3>Gallery</h3>
-      <div class="gallery-grid" id="galleryGrid">
-        <img src="https://images.unsplash.com/photo-1543332164-6e6e8bb5c6f8?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="dish 1">
-        <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="dish 2">
-        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="dish 3">
-      </div>
-    </section>
+/* Hero */
+.hero{background-image:linear-gradient(0deg, rgba(232,90,79,0.05), rgba(232,90,79,0.05)), url('https://images.unsplash.com/photo-1498654200791-5e54e1e1991d?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder');background-size:cover;background-position:center;padding:60px 0;color:#fff}
+.hero-content{background:linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.18));padding:40px;border-radius:12px;max-width:760px}
+.hero h2{font-size:2rem;margin-bottom:8px}
+.hero p{opacity:0.95;margin-bottom:12px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none}
+.btn:hover{opacity:.95}
 
-    <section id="contact" class="container section contact">
-      <h3>Contact / Order</h3>
-      <p>Aap seedhe phone ya email se order kar sakte hain. Neeche form bhi bhar kar bhej sakte hain.</p>
+/* Sections */
+.section{padding:36px 0}
+.section h3{font-size:1.3rem;color:var(--accent);margin-bottom:8px}
+.muted{color:var(--muted);margin-bottom:16px}
 
-      <div class="contact-columns">
-        <form id="contactForm" class="contact-form" novalidate>
-          <label>
-            Naam
-            <input type="text" name="name" id="name" required placeholder="Aapka naam" />
-          </label>
-          <label>
-            Phone
-            <input type="tel" name="phone" id="phone" required placeholder="5634785634" />
-          </label>
-          <label>
-            Message / Order
-            <textarea name="message" id="message" rows="4" required placeholder="Aapka message ya order details"></textarea>
-          </label>
-          <button type="submit" class="btn">Send Message</button>
-          <p id="formStatus" class="form-status" aria-live="polite"></p>
-        </form>
+/* Menu grid */
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.menu-item{background:var(--card-bg);padding:14px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.06)}
+.menu-item h4{margin-bottom:6px}
+.price{display:inline-block;margin-top:10px;color:var(--accent);font-weight:600}
 
-        <div class="contact-card">
-          <h4>Visit / Call</h4>
-          <p><strong>Nisha Food</strong></p>
-          <p>Bahadrabad, Haridwar, Uttarakhand - 249402</p>
-          <p>Phone: <a href="tel:+915634785634">5634785634</a></p>
-          <p>Email: <a href="mailto:nburman745@gmail.com">nburman745@gmail.com</a></p>
-          <p>Opening Hours: 7:00 AM — 10:00 PM</p>
-        </div>
-      </div>
-    </section>
-  </main>
+/* About */
+.about .contact-info{list-style:none;margin-top:12px;color:var(--muted)}
+.about .contact-info li{margin-bottom:6px}
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Nisha Food — Bahadrabad, Haridwar. Designed by Nisha Food.</p>
-    </div>
-  </footer>
+/* Gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+.gallery-grid img{width:100%;height:160px;object-fit:cover;border-radius:8px;display:block}
 
-  <script src="script.js"></script>
-</body>
-</html>
+/* Contact */
+.contact-columns{display:grid;grid-template-columns:1fr 320px;gap:18px}
+.contact-form{background:var(--glass);padding:16px;border-radius:10px}
+.contact-form label{display:block;margin-bottom:10px;font-size:.95rem}
+.contact-form input,
+.contact-form textarea{width:100%;padding:8px;border-radius:6px;border:1px solid #ddd;margin-top:6px}
+.form-status{margin-top:10px;color:green}
+
+/* Contact card */
+.contact-card{background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+
+/* Footer */
+.site-footer{padding:18px 0;text-align:center;color:var(--muted);border-top:1px solid rgba(0,0,0,0.05)}
+
+/* Responsive */
+@media (max-width:900px){
+  .contact-columns{grid-template-columns:1fr}
+}
+@media (max-width:700px){
+  .menu-toggle{display:block}
+  .nav-list{position:absolute;right:16px;top:68px;background:#fff;padding:8px;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,0.08);flex-direction:column;display:none}
+  .nav-list.show{display:flex}
+}
